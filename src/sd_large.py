@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings('ignore')
 from huggingface_hub import login
 
-DEVICE = 'cuda:1' if torch.cuda.is_available else 'cpu' # device
+DEVICE = 'cuda' if torch.cuda.is_available else 'cpu' # device
 NUM_INFERENCE_STEPS = 2 # Number of inference steps to the Diffusion Model
 login("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")
 model = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large", torch_dtype=torch.float16)
