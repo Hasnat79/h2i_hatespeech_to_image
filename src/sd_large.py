@@ -11,7 +11,7 @@ from huggingface_hub import login
 
 DEVICE = 'cuda' if torch.cuda.is_available else 'cpu' # device
 NUM_INFERENCE_STEPS = 2 # Number of inference steps to the Diffusion Model
-login("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")
+login(HUGGINGFACE_TOKEN)
 model = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large", torch_dtype=torch.float16)
 # model = torch.nn.DataParallel(model)
 model = model.to(DEVICE)
