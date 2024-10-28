@@ -7,11 +7,12 @@ from utils import filter_superset_data
 def generate_superset_hatespeech_data (en_hatespeech_super_set, keywords, output_path):
   
   
-  # if labels = 1, hateful/negative
-  path = output_path.replace(".csv", "_negative.csv")
+  # if label == 0, then it is non_hateful
+
+  path = output_path.replace(".csv", "_non_hatefull.csv")
   filter_superset_data(en_hatespeech_super_set, keywords,path,labels=0)
-  # label ==0 , positive
-  path = output_path.replace(".csv","_positive.csv")
+  # if label == 1, then it is hateful
+  path = output_path.replace(".csv","_hateful.csv")
   filter_superset_data(en_hatespeech_super_set,keywords, path, labels=1)
 
 
