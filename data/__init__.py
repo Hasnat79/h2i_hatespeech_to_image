@@ -1,6 +1,8 @@
 import pandas as pd
-
-dir_path = "/home/grads/h/hasnat.md.abdullah/h2i_hatespeech_to_image/data/"
+#uncomment when using spider_man
+# dir_path = "/home/grads/h/hasnat.md.abdullah/h2i_hatespeech_to_image/data/"
+#uncomment when using hprc
+dir_path = "/scratch/user/hasnat.md.abdullah/h2i_hatespeech_to_image/data"
 en_super_set_path = dir_path+"en_hf.csv"
 # ucb_hatespeech_path =""
 
